@@ -1,0 +1,17 @@
+{
+    "contents" : "library(shiny)\n\nshinyUI(\n  pageWithSidebar(\n    headerPanel(\"Mortgage Simulator\"),\n    sidebarPanel(\n      numericInput(inputId = 'house_price', label = \"Price of House:\", \n                   value = 180000, step = 5000),\n      numericInput(inputId = 'down_payment', label = \"Down Payment:\", \n                   value = 15000, step = 500),\n      numericInput(inputId = \"interest\", label = \"Interest Rate:\", \n                   min = 2, max = 5, value = 3.875, step = .005),\n      numericInput(inputId = \"loan_duration\", label = \"Loan Duration:\", \n                   value = 30),\n      checkboxInput(inputId = \"is_paying_more\", \n                    label = \"Make bigger monthly payment?\", value = FALSE),\n      numericInput(inputId = \"monthly_pmt\", label = \"Size of monthly payment\", \n                   value = NULL, step = 50)\n    ),\n    mainPanel(\n      h2(textOutput('monthly_pmt')),\n      plotOutput('int_vs_prin', width = 800, height = 400),\n      plotOutput('cum_plot', width = 800, height = 600)      \n    )\n  )\n)\n",
+    "created" : 1420227045706.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "286691794",
+    "id" : "8F562536",
+    "lastKnownWriteTime" : 1420300536,
+    "path" : "~/projects/mortgage-sumulator/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
